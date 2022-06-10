@@ -248,11 +248,9 @@ const Content = () => {
 						<div style={{marginBottom: '10px', marginTop: '10px'}}>
 							<b>Tech:</b> C++, Assembly. 
 						</div>
-						Jobin is a Job System implemented using fiber/coroutine for job execution. It imitates the
-						JavaScript Async and Await API for dispatching and waiting for jobs that will be executed
-						in parallel by the system threads. It allows faster and easy development of parallel applications.
-						It uses a lot of assembly code taken from the debootsted version of the boost context API to accelerate
-						context switches within jobs.
+						Jobin is a Job System implemented using fibers for job execution. It mimics the
+						JavaScript Async and Await API for dispatching and wainting for jobs that will be executed in parallel by the system threads. It allows faster and easy development of parallel applications.
+						It uses a lot of assembly code taken from the deboost version of the boost context API to accelerate context switches within jobs. It is compatible with pretty much any modern architecture.
 
 						<div>
 							The project is inspired by the <a className="link" href="https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine">Parallelizing e Naughty Dog engine using fibers</a> talk by Christian Gyrling.
