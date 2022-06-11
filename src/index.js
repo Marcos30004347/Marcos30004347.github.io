@@ -171,8 +171,9 @@ const Content = () => {
 					<b>Programming Languages:</b>
 					<ul>
 						<li>C/C++</li>
-						<li>Go</li>
-						<li>JavaScript</li>
+						<li>go</li>
+						<li>Javascript</li>
+						<li>Typescript</li>
 						<li>Python</li>
 						<li>WebAssembly</li>
 					</ul>
@@ -182,11 +183,10 @@ const Content = () => {
 					<ul>
 						<li>Kubernetes</li>
 						<li>Vagrant</li>
-						<li>MongoDB</li>
-						<li>SQL</li>
 						<li>Docker</li>
 						<li>Kafka</li>
 						<li>Zookeeper</li>
+						<li>Consul</li>
 						<li>Ansible</li>
 					</ul>
 				</div>
@@ -197,6 +197,8 @@ const Content = () => {
 						<li>CMake</li>
 						<li>GraphQL</li>
 						<li>Emscripten</li>
+						<li>MongoDB</li>
+						<li>SQL</li>
 					</ul>
 				</div>
 				<div className="topic-content">
@@ -289,7 +291,7 @@ const Content = () => {
 
 					</Project>
 
-					<Project title="Bootstraper" href="https://github.com/Marcos30004347/bootstraper">
+					<Project title="Bootstrapper" href="https://github.com/Marcos30004347/bootstrapper">
 
 						<div style={{marginBottom: '10px', marginTop: '10px'}}>
 							<b>Tech:</b> Go, Kubernetes, Kafka, MongoDB, Ansible, Docker, Kafka, Zookeeper, Consul, Vagrant. 
@@ -299,7 +301,7 @@ const Content = () => {
 						kubernetes cluster using Vagrant virtual machines and a lot of infrastructure
 						services configured out of the box with <b>Dockefiles</b> and <b>Ansible</b> playbooks, including MongoDB, Kafka, Consul and Zookeeper.						
 						<div>
-							You can access the <a className="link" href="https://github.com/Marcos30004347/bootstraper">github</a> repository of the project.
+							You can access the <a className="link" href="https://github.com/Marcos30004347/bootstrapper">github</a> repository of the project.
 						</div>
 					</Project>
 										<Project title="gauss" href="https://github.com/Marcos30004347/gauss">
