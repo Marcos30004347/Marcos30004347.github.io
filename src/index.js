@@ -1,4 +1,5 @@
 import "./main.css";
+import "./time.css";
 
 import { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client';
@@ -9,6 +10,82 @@ import medium_icon from './static/svg/medium.svg'
 import linkedin_icon from './static/svg/linkedin.svg'
 import github_icon from './static/svg/github.svg'
 
+
+const Timeline = () => {
+const timelineSetup = () => {
+  var items = document.querySelectorAll(".timeline li");
+
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+}
+
+	useEffect(() => timelineSetup(), [])
+	
+	return (
+		
+			
+<section class="timeline">
+  <ul>
+    <li>
+      <div>
+        <time>2018 📚</time>
+				In 2018 I got accepted into the Federal University of Minas Gerais for Computer Science(UFMG).
+      </div>
+    </li>
+
+		<li>
+      <div>
+        <time>2018 👨‍💻</time>
+				In 2018 I got my first internship at Tamborine as a Full Stack Intern. There I worked developing a full stack application using NodeJS and ReactJS.
+      </div>
+    </li>
+
+    <li>
+      <div>
+        <time>2019  👨‍💻</time>
+				In 2019 I got a internship at Nosebit where I worked with distributed systems and work with the Nosebit team to develop a Dev Performance Tracker application using microservices, the system tracks activities of developers within common applications like github, gitlab, trello, jira and compute metrics of development showing the developer his relative performance comparing to the teams average and show his performance throughout the months.
+			</div>
+    </li>
+
+
+    <li>
+      <div>
+        <time>2020 😷 🦠 </time>
+				In 2020 I use some of my free time caused by the COVID-19 pandemic and the lockdown to study more complex stuff in computer science relating my fields of interest like math, compilers and parallel programming.</div>
+    </li>
+
+    <li>
+      <div>
+        <time>2021 - 2022 💻</time>
+				In 2021 I worked on a lot of cool projects including a library that mimics the Promise system of JavaScript for C++ that worked in all the system threads. I also develop some simple distributed applications using some cool tech that I was interested in. During 2022 I did also study and work on a lot of math related applications, including a full flagged algebraic system for C++. 
+			</div>
+    </li>
+	</ul>
+</section>
+
+	)
+
+} 
 
 const Post = ({ href, title, children }) => {
 	return (
@@ -32,34 +109,41 @@ const Project = ({ href, title, children }) => {
 	)
 }
 
+
 const HelloColumn = () => {
 
 	return (
 		<div className="hello">
 			<div className="about">
-				Hi, my name is
-				<div className="name">
-					Marcos Vinicius.
+				Hi, I'm
+				<div className="typing">
+					Marcos!
 				</div>
 			</div>
 			
 			<div className="social">
+				{/* <div className="item"> 
+						<img style={{width: '20px', height: '20px', marginRight: '10px'}} src={email_icon} alt="email" />
+						marcos30004347@gmail.com
+						</div>
+					*/}
 				<div className="item"> 
-					<img style={{width: '20px', height: '20px', marginRight: '10px'}} src={email_icon} alt="email" />
-					marcos30004347@gmail.com
+					<a href="https://www.linkedin.com/in/marcos-vinicius-bb7812166/">
+						<img style={{width: '30px', height: '30px', marginRight: '10px'}} src={linkedin_icon} alt="email" />
+						
+					</a>
 				</div>
-
 				<div className="item"> 
-					<img style={{width: '20px', height: '20px', marginRight: '10px'}} src={linkedin_icon} alt="email" />
-					<a href="https://www.linkedin.com/in/marcos-vinicius-bb7812166/">linkedin</a>
-				</div>
-				<div className="item"> 
-					<img style={{width: '20px', height: '20px', marginRight: '10px'}} src={github_icon} alt="email" />
-					<a href="https://github.com/Marcos30004347">github</a>
+					<a href="https://github.com/Marcos30004347">
+					<img style={{width: '30px', height: '30px', marginRight: '10px'}} src={github_icon} alt="email" />
+						
+					</a>
 				</div> 
 				<div className="item"> 
-					<img style={{width: '20px', height: '20px', marginRight: '10px', backgroundColor: 'white', borderRadius: '3px'}} src={medium_icon} alt="email" />
-					<a href="https://medium.com/@marcos30004347">medium</a>
+					<a href="https://medium.com/@marcos30004347">
+					<img style={{width: '30px', height: '30px', marginRight: '10px'}} src={medium_icon} alt="email" />
+						
+					</a>
 				</div>
 				
 			</div>
@@ -70,7 +154,7 @@ const HelloColumn = () => {
 const Content = () => {
 	return (
 		<div className="content">
-			<div className="topic small center">
+			<div className="topic medium">
 				<div className="topic-title">About</div>
 				<div className="topic-content large">
 					<div className="text">
@@ -125,7 +209,7 @@ const Content = () => {
 				</div>
 
 			</div>
-			<div className="topic">
+			<div className="topic nomargin">
 				<div className="topic-title">Areas of Interest</div>
 				<div className="topic-content">
 					<ul>
@@ -136,10 +220,13 @@ const Content = () => {
 						<li>Computer Graphics</li>
 						<li>GPU Programming</li>
 						<li>Web Development</li>
+						<li>Type Theory</li>
 					</ul>
 				</div>
 			</div>
 			
+			<Timeline/>
+
 			<div className="topic medium">
 				<div className="topic-title">Blog Posts</div>
 				<div className="topic-content">
@@ -157,6 +244,8 @@ const Content = () => {
 					</Post>
 				</div>
 			</div>
+
+			
 			<div className="topic medium">
 				<div className="topic-title">Project Highlights</div>
 				<div className="topic-content horizontal">
@@ -165,7 +254,7 @@ const Content = () => {
 							<b>Tech:</b> ReactJS, WebAssembly. 
 						</div>
 						<div>
-							Mathemagic is an online app for Mathematics accelerated with WebAssembly. This application is the culmination of my studies in mathematics and two of my other projects. It uses Gauss, a low level symbolic math library that I wrote in C++ compiled to WebAssembly. The project aims to be a multicultural math application aimed at teenagers and childs from all around the world, including those that are not English speakers yet. Unfortunately my time to work on the app is limited and there is still lots of work to be done, I may add those in the near future when I have more free time.
+							Mathemagic is an online app for Mathematics accelerated with WebAssembly. This application is the culmination of my studies in mathematics and two of my other projects. The project aims to be a multicultural math application aimed at teenagers and childs from all around the world.
 							<div>
 								You cant test the app at <a className="link" href="https://marcos30004347.github.io/mathemagic/#/query">mathemagic</a> or access the 	<a className="link" href="https://github.com/Marcos30004347/mathemagic">github</a> repository. 
 							</div>
@@ -173,29 +262,6 @@ const Content = () => {
 						</div>
 					</Project>
 
-					<Project title="gauss" href="https://github.com/Marcos30004347/gauss">
-						<div style={{marginBottom: '10px', marginTop: '10px'}}>
-							<b>Tech:</b> C++, CMake, Emscripten, WebAssembly, NodeJS, JavaScript. 
-						</div>
-						<div>
-							Gauss is a symbolic math library, in the same style as Sympy but written in pure C++. The fact that the library has no external dependencies and is written in pure C++ makes it possible for the library to be compatible with a lot of different targets, including WebAssembly. The library is available for C++, Javascript and NodeJS(through WebAssembly) at npm.
-						</div>
-						<div>
-							The library have a lot of complex and state of the art algorithms for symbolic computing, between them are:
-							<ul>
-								<li>Multivariate Polynomial Factorization</li>
-								<li>Big Integer Arithmetic (implementation follows the <a className="link" href="https://github.com/python/cpython/blob/main/Objects/longobject.c">python</a> implementation)</li>
-								<li>Heuristic Methods for fast polynomial Greatest Common Divisor calculator
-								</li>
-								<li>Univariate Polynomial Root Finding fot complex and real roots</li>
-								<li>Derivative Computations</li>
-								<li>Singular Value Decomposition for Matrices with precision similar to LAPACK and numpy</li>
-							</ul>
-						</div>
-						<div>
-							You can access the 	<a className="link" href="https://github.com/Marcos30004347/gauss">github</a> repository of the project. 
-						</div>
-					</Project>
 
 					<Project title="Android App in C++" href="https://github.com/Marcos30004347/android-cpp-triangle">
 						<div style={{marginBottom: '10px', marginTop: '10px'}}>
@@ -231,19 +297,35 @@ const Content = () => {
 
 						This is a local project bootstraper for distributed applications, it have a local
 						kubernetes cluster using Vagrant virtual machines and a lot of infrastructure
-						services configured out of the box with <b>Dockefiles</b> and <b>Ansible</b> playbooks, including:
-						<ul>
-							<li>MongoDB</li>
-							<li>Kafka</li>
-							<li>Consul</li>
-							<li>Zookeeper</li>
-						</ul>
-						
+						services configured out of the box with <b>Dockefiles</b> and <b>Ansible</b> playbooks, including MongoDB, Kafka, Consul and Zookeeper.						
 						<div>
 							You can access the <a className="link" href="https://github.com/Marcos30004347/bootstraper">github</a> repository of the project.
 						</div>
 					</Project>
-					
+										<Project title="gauss" href="https://github.com/Marcos30004347/gauss">
+						<div style={{marginBottom: '10px', marginTop: '10px'}}>
+							<b>Tech:</b> C++, CMake, Emscripten, WebAssembly, NodeJS, JavaScript. 
+						</div>
+						<div>
+							Gauss is a symbolic math library, in the same style as Sympy but written in pure C++. The fact that the library has no external dependencies and is written in pure C++ makes it possible for the library to be compatible with a lot of different targets, including WebAssembly. The library is available for C++, Javascript and NodeJS(through WebAssembly) at npm.
+						</div>
+						<div>
+							The library have a lot of complex and state of the art algorithms for symbolic computing, between them are:
+							<ul>
+								<li><b>1.</b> Multivariate Polynomial Factorization</li>
+								<li><b>2.</b> Big Integer Arithmetic (implementation follows the <a className="link" href="https://github.com/python/cpython/blob/main/Objects/longobject.c">python</a> implementation)</li>
+								<li><b>3.</b> Heuristic Methods for fast polynomial Greatest Common Divisor calculator
+								</li>
+								<li><b>4.</b> Univariate Polynomial Root Finding fot complex and real roots</li>
+								<li><b>5.</b> Derivative Computations</li>
+								<li><b>6.</b> Singular Value Decomposition for Matrices with precision similar to LAPACK and numpy</li>
+							</ul>
+						</div>
+						<div>
+							You can access the 	<a className="link" href="https://github.com/Marcos30004347/gauss">github</a> repository of the project. 
+						</div>
+					</Project>
+
 					<Project title="Jobin" href="https://github.com/Marcos30004347/Jobin">
 						<div style={{marginBottom: '10px', marginTop: '10px'}}>
 							<b>Tech:</b> C++, Assembly. 
@@ -262,12 +344,16 @@ const Content = () => {
 				</div>
 
 			</div>
+
+
+
 		</div>
 
 	)
 }
 
 const App = () => {
+
 	return(
 		<div className="container">
 			<HelloColumn/>
