@@ -39,49 +39,62 @@ const timelineSetup = () => {
   window.addEventListener("scroll", callbackFunc);
 }
 
-	useEffect(() => timelineSetup(), [])
+useEffect(() => timelineSetup(), [])
 	
-	return (
-		
-			
+return (			
 <section class="timeline">
   <ul>
     <li>
       <div>
         <time>2018 📚</time>
-				In 2018 I got accepted into the Federal University of Minas Gerais for Computer Science(UFMG).
+        In 2018, I was accepted into the Federal University of Minas Gerais (UFMG) for a bachelor's degree in Computer Science.
       </div>
     </li>
 
-		<li>
+    <li>
       <div>
         <time>2018 👨‍💻</time>
-				In 2018 I got my first internship at Tamborine as a Full Stack Intern. There I worked developing a full stack application using NodeJS and ReactJS.
+        During the same year, I secured my first internship at Tamborine as a Full Stack Developer intern.
       </div>
     </li>
 
     <li>
       <div>
-        <time>2019  👨‍💻</time>
-				In 2019 I got a internship at Nosebit where I worked with distributed systems and work with the Nosebit team to develop a Dev Performance Tracker application using microservices, the system tracks activities of developers within common applications like github, gitlab, trello, jira and compute metrics of development showing the developer his relative performance comparing to the teams average and show his performance throughout the months.
-			</div>
-    </li>
-
-
-    <li>
-      <div>
-        <time>2020 😷 🦠 </time>
-				In 2020 I use some of my free time caused by the COVID-19 pandemic and the lockdown to study more complex stuff in computer science relating my fields of interest like math, compilers and parallel programming.</div>
+        <time>2019 👨‍💻</time>
+        In 2019, I embarked on another internship at Nosebit where I gained valuable experience working with microservices applications.
+      </div>
     </li>
 
     <li>
       <div>
-        <time>2021 - 2022 💻</time>
-				In 2021 I worked on a lot of cool projects including a library that mimics the Promise system of JavaScript for C++ that worked in all the system threads. I also develop some simple distributed applications using some cool tech that I was interested in. During 2022 I did also study and work on a lot of math related applications, including a full flagged algebraic system for C++. 
-			</div>
+        <time>2020 😷 🦠</time>
+        The year 2020 brought the challenges of COVID-19. With the company I was employed at closing its doors, I utilized my free time to delve into more complex areas of computer science that aligned with my interests. I delved into topics such as math, compilers, and parallel programming.
+      </div>
     </li>
-	</ul>
+
+    <li>
+      <div>
+        <time>2021 💻</time>
+        The year 2021 was marked by exciting projects. I developed a C++ library that emulates the Async/Await feature of JavaScript and can use as many system threads as a programmer needs abstracting all the complexity. Additionally, I crafted simple distributed applications using cutting-edge technologies that had captured my interest.
+      </div>
+    </li>
+
+    <li>
+      <div>
+        <time>2022 💻</time>
+        In 2022, I dive deep into math-related applications, creating an algebraic system with C++ with state of the art algorithms. By August 2022, I got a position as an AWS Software Developer intern, marking a significant milestone.
+      </div>
+    </li>
+
+    <li>
+      <div>
+        <time>2023 👨‍💻</time>
+        Throughout 2023, I contributed to AWS, focusing on the development of educational applications that utilized gaming to teach cloud concepts using AWS services. Collaborating with a globally distributed team, I employed languages such as C#, JavaScript, and Python. This experience offered insights into various AWS services and their efficient utilization for optimal performance and cost-effectiveness. Notably, I also achieved my AWS Cloud Practitioner Certification during this year.
+      </div>
+    </li>
+  </ul>
 </section>
+
 
 	)
 
@@ -157,11 +170,12 @@ const Content = () => {
 			<div className="topic medium">
 				<div className="topic-title">About</div>
 				<div className="topic-content large">
-					<div className="text">
-						I'm a 23 years old <b>Software Engineer</b>. My journey as a programmer started when my family bought our first computer and I tried to recreate some of the games that I was interested in.</div>
-					<div className="text">
-						Currently I'm finishing my Bachelor degree in Computer Science at the Federal University of Minas Gerais(UFMG) in Brazil.
-					</div>	
+				<div className="text">
+  					Hey there, I'm a 23-year-old <b>Software Engineer</b>. My journey into programming started way back in my early days when my parents got our first family computer around the time I was 10 or 11. Now, that computer wasn't exactly a powerhouse and couldn't handle many games. So, what did I do? I dived into recreating games similar to the ones I wanted to play. I used popular programs of that time, like Flash and Blender, to bring my ideas to life.
+				</div>
+				<div className="text">
+ 					Fast forward to today—I've earned my bachelor's degree in computer science from the Federal University of Minas Gerais (UFMG). My interests run deep, spanning across various domains. I'm captivated by the realms of High-Performance Programming, Web Development, Compilers, and Type Theory.
+				</div>
 				</div>
 			</div>
 
@@ -171,7 +185,8 @@ const Content = () => {
 					<b>Programming Languages:</b>
 					<ul>
 						<li>C/C++</li>
-						<li>go</li>
+						<li>Go</li>
+						<li>C#</li>
 						<li>Javascript</li>
 						<li>Typescript</li>
 						<li>Python</li>
@@ -230,123 +245,80 @@ const Content = () => {
 			<Timeline/>
 
 			<div className="topic medium">
-				<div className="topic-title">Blog Posts</div>
-				<div className="topic-content">
-					<Post href="https://medium.com/@marcos30004347/programming-a-kubernetes-extension-api-server-part-1-60526e141a10" title="Programming a Kubernetes Extension API Server - part 1"
-					>
-						In this post I explain how to bootstrap your own custom K8s extension API Server from scratch in Go. Back in the days when I was trying to develop my own native sidecar injection for K8s I didn't find any good documentation or tutorials about Custom Extensions servers, so I deep dive in some books and create the kind of tutorial that I wish existed when I started my journey. 
-					</Post>
-					<Post href="https://medium.com/@marcos30004347/programming-a-kubernetes-extension-api-server-part-2-ab3b2123ad78" title="Programming a Kubernetes Extension API Server - part 2"
-					>
-						The continuation of the first post. Here we go deeper and explain some more complex stuff about the server and add some basic functionalities.
-					</Post>
-					<Post href="https://medium.com/@marcos30004347/programming-a-kubernetes-extension-api-server-part-3-f7edddc974f4" title="Programming a Kubernetes Extension API Server - part 3"
-					>
-						The final part of the series. In this part all the manifest files for the deployment of the server are explained and the server is finally deployed on a k8s cluster.  
-					</Post>
-				</div>
+			  <div className="topic-title">Blog Posts</div>
+			  <div className="topic-content">
+			    <Post href="https://medium.com/@marcos30004347/programming-a-kubernetes-extension-api-server-part-1-60526e141a10" title="Programming a Kubernetes Extension API Server - Part 1">
+			      In this post, I dive into creating your own custom K8s extension API Server from scratch in Go. I remember struggling to find good documentation or tutorials about Custom Extensions servers back when I was working on my native sidecar injection for K8s. So, I went deep into books and put together the kind of tutorial I wished existed when I began my journey.
+			    </Post>
+			    <Post href="https://medium.com/@marcos30004347/programming-a-kubernetes-extension-api-server-part-2-ab3b2123ad78" title="Programming a Kubernetes Extension API Server - Part 2">
+			      Building on the first post, this one takes you even deeper. We explore more complex aspects of the server and add some essential functionalities.
+			    </Post>
+			    <Post href="https://medium.com/@marcos30004347/programming-a-kubernetes-extension-api-server-part-3-f7edddc974f4" title="Programming a Kubernetes Extension API Server - Part 3">
+			      Wrapping up the series, this part breaks down all the manifest files needed to deploy the server and finally get it running on a Kubernetes cluster.
+			    </Post>
+			  </div>
 			</div>
-
 			
 			<div className="topic medium">
-				<div className="topic-title">Project Highlights</div>
-				<div className="topic-content horizontal">
-					<Project title="mathemagic" href="https://github.com/Marcos30004347/mathemagic">
-						<div style={{marginBottom: '10px', marginTop: '10px'}}>
-							<b>Tech:</b> ReactJS, WebAssembly. 
-						</div>
-						<div>
-							Mathemagic is an online app for Mathematics accelerated with WebAssembly. This application is the culmination of my studies in mathematics and two of my other projects. The project aims to be a multicultural math application aimed at teenagers and childs from all around the world.
-							<div>
-								You cant test the app at <a className="link" href="https://marcos30004347.github.io/mathemagic/#/query">mathemagic</a> or access the 	<a className="link" href="https://github.com/Marcos30004347/mathemagic">github</a> repository. 
-							</div>
-							
-						</div>
-					</Project>
-
-
-					<Project title="Android App in C++" href="https://github.com/Marcos30004347/android-cpp-triangle">
-						<div style={{marginBottom: '10px', marginTop: '10px'}}>
-							<b>Tech:</b> C++, Android. 
-						</div>
-						This is a simple project where I implemented from scratch and android application
-						whitout java and any google toolchain, the application is a simple triangle renreder
-						build intirelly in C++, the app is compiled using the Android SDK and NDK and the final .apk file is create using bash scripts also written from scratch.
-
-						<div>
-							You can access the <a className="link" href="https://github.com/Marcos30004347/android-cpp-triangle">github</a> repository of the project. 
-						</div>
-
-					</Project>
-
-					<Project title="LLVM IR dead code elimination" href="https://github.com/Marcos30004347/llvm-dead-code-elimination">
-						<div style={{marginBottom: '10px', marginTop: '10px'}}>
-							<b>Tech:</b> C++, LLVM Compiler Infrastructure. 
-						</div>
-
-						This is a <a className="link" href="https://llvm.org/">LLVM</a> pass that uses Range Analysis to statically decide if a branch will never be taken, if it does the pass can remove the unnecessary computation from the final code making it smaller and faster.
-						<div>
-							You can access the <a  className="link" href="https://github.com/Marcos30004347/llvm-dead-code-elimination">github</a> repository of the project.
-						</div>
-
-					</Project>
-
-					<Project title="Bootstrapper" href="https://github.com/Marcos30004347/bootstrapper">
-
-						<div style={{marginBottom: '10px', marginTop: '10px'}}>
-							<b>Tech:</b> Go, Kubernetes, Kafka, MongoDB, Ansible, Docker, Kafka, Zookeeper, Consul, Vagrant. 
-						</div>
-
-						This is a local project bootstraper for distributed applications, it have a local
-						kubernetes cluster using Vagrant virtual machines and a lot of infrastructure
-						services configured out of the box with <b>Dockefiles</b> and <b>Ansible</b> playbooks, including MongoDB, Kafka, Consul and Zookeeper.						
-						<div>
-							You can access the <a className="link" href="https://github.com/Marcos30004347/bootstrapper">github</a> repository of the project.
-						</div>
-					</Project>
-										<Project title="gauss" href="https://github.com/Marcos30004347/gauss">
-						<div style={{marginBottom: '10px', marginTop: '10px'}}>
-							<b>Tech:</b> C++, CMake, Emscripten, WebAssembly, NodeJS, JavaScript. 
-						</div>
-						<div>
-							Gauss is a symbolic math library, in the same style as Sympy but written in pure C++. The fact that the library has no external dependencies and is written in pure C++ makes it possible for the library to be compatible with a lot of different targets, including WebAssembly. The library is available for C++, Javascript and NodeJS(through WebAssembly) at npm.
-						</div>
-						<div>
-							The library have a lot of complex and state of the art algorithms for symbolic computing, between them are:
-							<ul>
-								<li><b>1.</b> Multivariate Polynomial Factorization</li>
-								<li><b>2.</b> Big Integer Arithmetic (implementation follows the <a className="link" href="https://github.com/python/cpython/blob/main/Objects/longobject.c">python</a> implementation)</li>
-								<li><b>3.</b> Heuristic Methods for fast polynomial Greatest Common Divisor calculator
-								</li>
-								<li><b>4.</b> Univariate Polynomial Root Finding fot complex and real roots</li>
-								<li><b>5.</b> Derivative Computations</li>
-								<li><b>6.</b> Singular Value Decomposition for Matrices with precision similar to LAPACK and numpy</li>
-							</ul>
-						</div>
-						<div>
-							You can access the 	<a className="link" href="https://github.com/Marcos30004347/gauss">github</a> repository of the project. 
-						</div>
-					</Project>
-
-					<Project title="Jobin" href="https://github.com/Marcos30004347/Jobin">
-						<div style={{marginBottom: '10px', marginTop: '10px'}}>
-							<b>Tech:</b> C++, Assembly. 
-						</div>
-						Jobin is a Job System implemented using fibers for job execution. It mimics the
-						JavaScript Async and Await API for dispatching and wainting for jobs that will be executed in parallel by the system threads. It allows faster and easy development of parallel applications.
-						It uses a lot of assembly code taken from the deboost version of the boost context API to accelerate context switches within jobs. It is compatible with pretty much any modern architecture.
-
-						<div>
-							The project is inspired by the <a className="link" href="https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine">Parallelizing e Naughty Dog engine using fibers</a> talk by Christian Gyrling.
-						</div>
-						<div>
-							You can access the <a className="link" href="https://github.com/Marcos30004347/Jobin">github</a> repository of the project. 
-						</div>
-					</Project>
-				</div>
-
+			  <div className="topic-title">Project Highlights</div>
+			  <div className="topic-content horizontal">
+			    <Project title="Android App in C++" href="https://github.com/Marcos30004347/android-cpp-triangle">
+			      <div style={{marginBottom: '10px', marginTop: '10px'}}>
+			        <b>Tech:</b> C++, Android.
+			      </div>
+			      This project is a simple showcase of my skills. I built an Android application from scratch without using Java or any Google toolchain. The app, a basic triangle renderer, was entirely coded in C++. I compiled it using the Android SDK and NDK and even crafted the final .apk file using self-written bash scripts.
+			      <div>
+			        You can access the <a className="link" href="https://github.com/Marcos30004347/android-cpp-triangle">GitHub</a> repository for the project.
+			      </div>
+			    </Project>
+			
+			    <Project title="LLVM IR Dead Code Elimination" href="https://github.com/Marcos30004347/llvm-dead-code-elimination">
+			      <div style={{marginBottom: '10px', marginTop: '10px'}}>
+			        <b>Tech:</b> C++, LLVM Compiler Infrastructure.
+			      </div>
+			      Here's a cool LLVM pass I developed. It uses Range Analysis to predict whether a branch will ever be taken. If it won't, the pass removes unnecessary computations from the final code, optimizing both size and speed.
+			      <div>
+			        You can access the <a className="link" href="https://github.com/Marcos30004347/llvm-dead-code-elimination">GitHub</a> repository for the project.
+			      </div>
+			    </Project>
+			
+			    <Project title="Bootstrapper" href="https://github.com/Marcos30004347/bootstrapper">
+			      <div style={{marginBottom: '10px', marginTop: '10px'}}>
+			        <b>Tech:</b> Go, Kubernetes, Kafka, MongoDB, Ansible, Docker, Kafka, Zookeeper, Consul, Vagrant.
+			      </div>
+			      Check out this handy local project bootstrapper for distributed applications. It sets up a local Kubernetes cluster using Vagrant VMs and comes with infrastructure services already configured. MongoDB, Kafka, Consul, and Zookeeper are all ready to go, thanks to the included Dockerfiles and Ansible playbooks.
+			      <div>
+			        You can access the <a className="link" href="https://github.com/Marcos30004347/bootstrapper">GitHub</a> repository for the project.
+			      </div>
+			    </Project>
+			
+			    <Project title="Gauss" href="https://github.com/Marcos30004347/gauss">
+			      <div style={{marginBottom: '10px', marginTop: '10px'}}>
+			        <b>Tech:</b> C++, CMake, Emscripten, WebAssembly, NodeJS, JavaScript.
+			      </div>
+			      Introducing Gauss, a symbolic math library crafted entirely in C++. Think of it like Sympy, but pure C++. What's cool is that it's compatible with various targets, including WebAssembly. It supports C++, JavaScript, and NodeJS (via WebAssembly) through npm.
+			      <div>
+			        The library boasts a range of complex algorithms for symbolic computing, like multivariate polynomial factorization, big integer arithmetic, polynomial greatest common divisor calculation, polynomial root finding, derivative computations, and matrix singular value decomposition with precision similar to LAPACK and numpy.
+			      </div>
+			      <div>
+			        You can access the <a className="link" href="https://github.com/Marcos30004347/gauss">GitHub</a> repository for the project.
+			      </div>
+			    </Project>
+			
+			    <Project title="Jobin" href="https://github.com/Marcos30004347/Jobin">
+			      <div style={{marginBottom: '10px', marginTop: '10px'}}>
+			        <b>Tech:</b> C++, Assembly.
+			      </div>
+			      Introducing Jobin—a job system implemented using fibers for parallel job execution. It gives you that Async and Await feel from JavaScript, allowing easy dispatch and waiting for parallel jobs to be executed by system threads. The project also includes optimized assembly code for context switches, enhancing performance. Compatible with a variety of modern architectures.
+			      <div>
+			        This project was inspired by the <a className="link" href="https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine">Parallelizing the Naughty Dog Engine using fibers</a> talk by Christian Gyrling.
+			      </div>
+			      <div>
+			        You can access the <a className="link" href="https://github.com/Marcos30004347/Jobin">GitHub</a> repository for the project.
+			      </div>
+			    </Project>
+			  </div>
 			</div>
-
 
 
 		</div>
